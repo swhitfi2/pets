@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+
+	<html xmlns:th="http://www.thymeleaf.org"> 
+	
+	<head> 
+	
+	<title>Pets</title> 
+
+ 
+		
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+	
+	<link rel="stylesheet" href="styles.css"> 
+		
+		 
+		
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+		
+		 
+		
+	</head> 
+		
+	<body> 
+
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+		
+		  <a class="navbar-brand" href="#">Pets</a> 
+		
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+		
+		    <span class="navbar-toggler-icon"></span> 
+		
+		  </button> 
+		
+		  <div class="collapse navbar-collapse" id="navbarNav"> 
+		
+		    <ul class="navbar-nav"> 
+		
+		      <li class="nav-item active"> 
+		
+		        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a> 
+		
+		      </li> 
+		
+		      <li class="nav-item active"> 
+		
+		        <a class="nav-link" href="/about">About</a> 
+		
+		      </li>      
+		
+		      <li class="nav-item active"> 
+		
+		        <a class="nav-link" href="/pets">Pets</a> 
+		
+		      </li> 
+		      
+		       <li class="nav-item active"> 
+
+       			 <a class="nav-link" href="/list">Owner List</a> 
+
+     		 </li> 
+		
+		    </ul> 
+		
+		  </div> 
+		
+		</nav> 
+
+
+		<div class="container"> 
+		
+		<h3><i>If you would like to share a short description of your pet add your favorite pet or 
+		become a member of our group and receive the latest in pet care updates, please sign up below.</i></h3> 
+		
+		<form action="#" th:action="@{/pets}" th:object="${petsUser}" method ="post"> 
+		
+		<table> 
+		
+		<tr> 
+		
+		<td>Name: </td> 
+		
+		<td><input type ="text" th:field="*{name}"/></td>	 
+		
+		</tr> 
+		
+		<tr> 
+		
+		<td>Pet Name: </td> 
+		
+		<td><input type ="text" th:field="*{petName}"/></td>	 
+		
+		</tr> 
+		
+		<tr> 
+		
+		<td>Description: </td> 
+		
+		<td><input type ="text" th:field="*{desc}"/></td>	 
+		
+		</tr> 
+		  
+		
+		<tr> 
+		
+		<td><button type="submit">Submit</button> 
+		 
+		
+		<button type="reset">Reset</button></td> 
+		
+		</tr>  
+			
+		</table> 
+		
+		
+		</form>  
+		
+		<p>We are so happy you decided to visit!</p> 
+		 
+		 
+		
+		<img src="../images/pet1.jpg" width="150"  height="175" th:src="@{images/pet1.jpg}"/> 
+		
+		<img src="../images/petBunny.jpg" width="150"  height="175" th:src="@{images/petBunny.jpg}"/> 
+		
+		
+		 
+		
+		</div> 
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> 
+		
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
+		
+		</body> 
+		
+		</html> 

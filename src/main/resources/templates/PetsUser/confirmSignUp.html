@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+
+<html xmlns:th="http://www.thymeleaf.org">   
+
+<head> 
+
+ 
+
+<title>Owner List</title> 
+
+ 
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+
+ 
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+
+ 
+
+ <link rel="stylesheet" href="styles.css"> 
+
+<body> 
+
+ 
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+
+  <a class="navbar-brand" href="#">Pets</a> 
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+
+    <span class="navbar-toggler-icon"></span> 
+
+  </button> 
+
+  <div class="collapse navbar-collapse" id="navbarNav"> 
+
+    <ul class="navbar-nav"> 
+
+      <li class="nav-item active"> 
+
+        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a> 
+
+      </li> 
+
+      <li class="nav-item active"> 
+
+        <a class="nav-link" href="/about">About</a> 
+
+      </li>      
+
+      <li class="nav-item active"> 
+
+        <a class="nav-link" href="/pets">Pets</a> 
+
+      </li> 
+
+    </ul> 
+
+  </div> 
+
+</nav> 
+
+ 
+
+<div class="container"> 
+
+ 
+
+<h2>Pets are members of the family!</h2> 
+
+
+<h3>Thanks for sharing your contact information!</h3> 
+ 
+
+<p>Name: <span th:text="${name}"></span></p> 
+
+
+
+<p>Pet Name: <span th:text="${petName}"></span></p> 
+ 
+
+<p>Description: <span th:text="${desc}"></span></p>  
+
+ 
+<img src="../images/stWrMovie.jpg" width="150"  height="175" th:src="@{images/stWrMovie.jpg}"/> 
+
+<img src="../images/theBirds.jpg" width="150"  height="175" th:src="@{images/theBirds.jpg}"/> 
+
+
+</div> 
+
+ 
+
+<div id="footer"><i>Copyright &copy; 2018 TTS Pet Blog Page</i><br> 
+
+ <small><i>All photographs are property of fanart.tv free 
+
+ </i></small></div> 
+ 
+
+</body> 
+
+
+</head> 
